@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="cart_header">
+            <div class="header_cart">
+                <img src="img/IMAGE.svg" alt="">
+              <select  class="select">
+                <option value="1">Products</option>
+              </select>
+              <select  class="select">
+                <option value="2">Use Cases</option>
+              </select>
+              <select  class="select">
+                <option value="3">Pricing</option>
+              </select>
+              <select  class="select">
+                <option value="4">Resources</option>
+              </select>
+              <select  class="select">
+                <option value="5">Company</option>
+              </select>
+              <a class="sign_1" href="">Sign In</a>
+              <button class="sign" type="submit">Request a demo</button>
+            </div>
+        </div>
+        <div class="cart_main">
+            <div class="main_picture">
+                <div class="main_text">
+                    <img class="picture" src="img/IMAGE (1).svg" alt="">
+                    <h1 class="text">Infrastructure for innovators</h1>
+                
+                    <img class="picture" src="img/IMAGE (2).svg" alt="">
+                    <p class="text_1">Carta’s platform of software and services lays the groundwork
+                         so you can focus on building the future.</p>
+                         <button class="sum" type="submit">Request a demo</button>
+                          <h4 class="sm">Take a video tour</h4>
+                          <img class="picture_1" src="img/IMAGE (3).svg" alt="">
+                          <img class="picture_2" src="img/IMAGE (4).svg" alt="">
+                        </div>
+              
+            </div>
+   
+          </div>
+          <div class="generation">
+            <div class="cart_genaration">
+              <h1 class="text_4">A generation of ownership built on Carta </h1>
+              <div class="number" data-max="2,201,980">0</div>
+              <p class="text_5" > Equity owners</p>
+            </div>
+          </div>
+        </header>
+    
+    <script>
+let number = document.querySelector('.number'),
+    numberTop = number.getBoundingClientRect().top,
+    start = +number.innerHTML, end = +number.dataset.max;
+
+    window.addEventListener('scroll', function onScroll() {
+      if(window.pageYOffset > numberTop - window.innerHeight / 6) {
+        this.removeEventListener('scroll', onScroll);
+        var interval = setInterval(function() {
+          number.innerHTML = ++start;
+          if(start == end) {
+            clearInterval(interval);
+          }
+        }, 5);
+      }
+    });
+
+
+    </script>
+    <script src="js.js"></script>
+</body>
+</html>
